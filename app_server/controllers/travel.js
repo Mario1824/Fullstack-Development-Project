@@ -3,6 +3,28 @@ const apiOptions = {
     server: 'http://localhost:3000'
 };
 
+const renderTravelList = (req, res, responseBody) => {
+    let message = null;
+    let pageTitle = process.env.npm_package_description + ' - Travel';
+
+    if (!(responseBody instanceof Array)) {
+        message = 'API lookup error';
+        responseBody = [];
+    } else {
+        if (!responseBody.length) {
+            message = 'No trips exist in database!';
+        }
+    }
+
+    res.render('travel', 
+        {
+            title: pageTitle,
+            trips: responseBody,
+            message
+        }
+    );
+}
+
 /* GET Travel View */
 const travelList = (req, res) => {
     const path = '/api/trips';
@@ -22,26 +44,10 @@ const travelList = (req, res) => {
             }
             renderTravelList(req, res, body);
         }
-    );
+    )
+}
+
+module.exports = {
+    travelList
 };
 
-const renderTravelList = (req, res, responseBody) => {
-    let message = null;
-    let pageTitle = process.env.npm_package_description + ' - Travel';
-
-    if (!(responseBody instanceof Array)) {
-        message = 'API lookup error';
-        responseBody = [];
-    } else {
-        if (!responseBody.length) {
-            message = 'No trips exist in database!';
-        }
-    }
-    res.render('travel', 
-        {
-            title: pageTitle,
-            trips: responseBody,
-            message
-        }
-    );
-}
