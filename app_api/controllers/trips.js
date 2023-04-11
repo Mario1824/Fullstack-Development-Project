@@ -70,7 +70,7 @@ const tripsAddTrip = async (req, res) => {
 
 const tripsUpdateTrip = async (req, res) => {
     console.log(req.body);
-    Trip
+    Model
     .findOneAndUpdate({'code': req.params.tripCode }, {
         code: req.body.code,
         name: req.body.name,
@@ -108,5 +108,5 @@ module.exports = {
     tripsList,
     tripsFindByCode,
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip 
 }; 
