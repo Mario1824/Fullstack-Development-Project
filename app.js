@@ -9,7 +9,7 @@ var logger = require('morgan');
 var passport = require('passport');
 
 require('./app_api/models/db');
-require('./app_api/models/db');
+require('./app_api/config/passport');
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
