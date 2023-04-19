@@ -31,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     HttpModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     TripDataService
