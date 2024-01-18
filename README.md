@@ -5,6 +5,6 @@ The travlr page was created both in an Angular project structure and an Express 
 
 This project used JSON to store data. It is easy to read and write, making it perfect to use with ease. JSON is used to exchange data to and from a server as well. JavaScript is a programming language that allows for dynamic and interactive webpages. 
 
-Layers of security were added using encrypted passwords and hashes, protecting our data. Users were limited on things they could until logging in as well. Although you could view the trips, a trip could not be added, edited, or updated unless user was logged in.
+Layers of security were added using encrypted passwords and hashes, protecting our data. Users were limited on things they could do until logging in as well. Although you could view the trips, a trip could not be added, edited, or updated unless user was logged in.
 
-This course was helpful in really seeing what the development process is like, and how many things come together. The use of MongoDB, Express, Angular, and NodeJS provided me with skills that will help in my future goals and career.
+The use of MongoDB, Express, Angular, and NodeJS provided me with skills that will help in my future goals and career.
